@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src='https://www.google.com/recaptcha/api.js'></script>
+        
+        <link href="{BasePath}Resources/ua/style.css" rel="stylesheet" type="text/css">
+        
+        <title> PaperWorks HUB :: Login </title>
+    </head>
+    <body>
+        <ul class="navigation">
+            <h2> PaperWorks HUB </h2>
+            
+            <a href="{BasePath}Account/Logout" > Log out </a>
+        </ul>
+        <div class="wrapper">
+            <h1> Welcome. <span class="underline gray"></span></h1>
+            
+            <p>
+                {Text}
+            </p>
+            
+            {Error}
+
+            <h1> {FormTitle} <span class="underline orange"></span></h1>
+            {Form}
+        </div> 
+    </body>
+</html>

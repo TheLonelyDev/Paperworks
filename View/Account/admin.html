@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="{BasePath}Resources/ua/style.css" rel="stylesheet" type="text/css">
+        
+        <title> PaperWorks HUB :: Login </title>
+    </head>
+    <body>
+        <ul class="navigation">
+            <h2> PaperWorks HUB </h2>
+            
+            <a href="{BasePath}Account/Logout" > Log out </a>
+        </ul>
+        <div class="wrapper">
+            <h1> Welcome. <span class="underline gray"></span></h1>
+            
+            <p>
+                {Text}
+            </p>
+            
+            {Error}
+
+            <h1> {FormTitle} <span class="underline orange"></span></h1>
+            {Form}
+        
+            
+            {Users}
+                <h2>[{intID}] {strName}<span class="underline gray"></h2>
+                <form method="post" action="">
+                    <label for="strName.form">
+                        Username:
+                        <input type="text" name="arrUser[strName]" id="strName.form" placeholder="{strName}">
+                    </label>
+                    <label for="strPassword.form">
+                        Password:
+                        <input type="text" name="arrUser[strPassword]" id="strPassword.form" class="Test">
+                    </label>
+                    <input type="hidden" name="arrUser[intID]" id="intDelete.form" value="{intID}">
+                    <button type="submit" class="bluesteel-btn">
+                        Modify
+                    </button>
+                </form>
+                <form method="post" action="">
+                    <input type="hidden" name="intDelete" id="intDelete.form" value="{intID}">
+                    <button type="submit" class="error-btn">
+                        Delete
+                    </button>
+                </form>
+                
+            {/Users}
+        </div> 
+    </body>
+</html>
